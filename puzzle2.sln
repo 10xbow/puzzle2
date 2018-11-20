@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "puzzle2", "puzzle2\puzzle2.csproj", "{79A78AF5-B906-494D-9C7A-61695B34A236}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q40", "q40\q40.csproj", "{A05B104B-852D-4705-8719-0DA37C95BDC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{79A78AF5-B906-494D-9C7A-61695B34A236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79A78AF5-B906-494D-9C7A-61695B34A236}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79A78AF5-B906-494D-9C7A-61695B34A236}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79A78AF5-B906-494D-9C7A-61695B34A236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A05B104B-852D-4705-8719-0DA37C95BDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05B104B-852D-4705-8719-0DA37C95BDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05B104B-852D-4705-8719-0DA37C95BDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05B104B-852D-4705-8719-0DA37C95BDC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
