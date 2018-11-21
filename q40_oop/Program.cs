@@ -12,7 +12,7 @@ namespace q40_oop
         {
             var Area = new Area(10, 10);
             var Tiles = new List<Tile> { new Tile(1, 1), new Tile(2, 2), new Tile(4, 2), new Tile(4, 4) };
-            Area.AddTile(Tiles[3]);
+            Area.AddTile(Tiles[2]);
             Area.Show();
             Console.ReadLine();
         }
