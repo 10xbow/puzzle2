@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q40", "q40\q40.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q41_1", "q41_1\q41_1.csproj", "{AB5C97A2-58CE-4652-89BE-36A93C941300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q40_oop", "q40_oop\q40_oop.csproj", "{91CC4697-5C3D-4CA6-8E98-02717233CAC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q41_oop", "q40_oop\q41_oop.csproj", "{91CC4697-5C3D-4CA6-8E98-02717233CAC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
