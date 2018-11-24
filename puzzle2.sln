@@ -13,6 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q41_2", "q41_2\q41_2.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q42", "q42\q42.csproj", "{EC8B7105-A1AE-4120-9A1D-E85525879230}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10B26C61-D823-47E1-9206-16391298C192}"
+	ProjectSection(SolutionItems) = preProject
+		Permutation.cs = Permutation.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q43_1", "q43_1\q43_1.csproj", "{05CD8121-38ED-45FE-B73B-49BC42FC3CD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +46,10 @@ Global
 		{EC8B7105-A1AE-4120-9A1D-E85525879230}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC8B7105-A1AE-4120-9A1D-E85525879230}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC8B7105-A1AE-4120-9A1D-E85525879230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05CD8121-38ED-45FE-B73B-49BC42FC3CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CD8121-38ED-45FE-B73B-49BC42FC3CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CD8121-38ED-45FE-B73B-49BC42FC3CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CD8121-38ED-45FE-B73B-49BC42FC3CD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
