@@ -10,7 +10,7 @@ namespace q50_1
     {
         static void Main(string[] args)
         {
-            int M = 50;
+            int M = 8;
             int N = 4;
 
             long search(int n, int prev, long used)
