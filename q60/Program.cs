@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace q60
 {
@@ -10,12 +8,12 @@ namespace q60
     {
         static void Main(string[] args)
         {
-            var memo = new Dictionary<(List<int>, int), int>(new GenericEqualityComparer<(List<int>, int), int>);
+            var memo = new Dictionary<(List<int>, int), int>(new MyEqualityComparer2()) { };
             var uniq = new Dictionary<List<int>, bool>(new MyEqualityComparer());
             // 順に探索
             int search(List<int> board, int user)
             {
-                if (memo.ContainsKey(board, user)) return memo[board, user];
+                if (memo.ContainsKey((board, user))) return memo[(board, user)];
                 if (Check(board, -user))
                 {
                     uniq[board] = true;
@@ -31,8 +29,13 @@ namespace q60
                         board[i] = 0;
                     }
                 }
-                memo.Add(board, user)
+                memo.Add((board, user),cnt);
+                return cnt;
             }
+
+            var Board = Enumerable.Repeat(0, 9).ToList();
+            Console.WriteLine(search(Board,1));
+            Console.WriteLine(uniq.Count());
         }
 
         static bool Check(List<int> board, int user)
@@ -65,18 +68,11 @@ namespace q60
     {
         public bool Equals(IList<int> x, IList<int> y)
         {
-            if (x.Count != y.Count)
+            if (x.SequenceEqual(y))
             {
-                return false;
+                return true;
             }
-            for (int i = 0; i < x.Count; i++)
-            {
-                if (x[i] != y[i])
-                {
-                    return false;
-                }
-            }
-            return true;
+            return false;
         }
 
         public int GetHashCode(IList<int> obj)
@@ -93,25 +89,18 @@ namespace q60
         }
     }
 
-    public class MyEqualityComparer2 : IEqualityComparer<(IList<int>, int)>
+    public class MyEqualityComparer2 : IEqualityComparer<(List<int>, int)>
     {
-        public bool Equals((IList<int>, int) x, (IList<int>, int) y)
+        public bool Equals((List<int>, int) x, (List<int>, int) y)
         {
-            if ((x.Item1.Count != y.Item1.Count) || (x.Item2 != y.Item2))
+            if (x.Item1.SequenceEqual(y.Item1) && x.Item2 == y.Item2)
             {
-                return false;
+                return true;
             }
-            for (int i = 0; i < x.Item1.Count; i++)
-            {
-                if (x.Item1[i] != y.Item1[i])
-                {
-                    return false;
-                }
-            }
-            return true;
+            return false;
         }
 
-        public int GetHashCode((IList<int>, int) obj)
+        public int GetHashCode((List<int>, int) obj)
         {
             int result = 17;
             for (int i = 0; i < obj.Item1.Count; i++)
@@ -121,32 +110,8 @@ namespace q60
                     result = result * 23 + obj.Item1[i];
                 }
             }
-            return result + obj.Item2;
-        }
-    }
-
-    public class GenericEqualityComparer<T> : IEqualityComparer<T>
-    {
-        private Func<T, T, bool> _predicate;
-        private Func<T, int> _gethash;
-
-        public GenericEqualityComparer(Func<T, T, bool> predicate)
-            : this(predicate, obj => obj.GetHashCode())
-        {
-        }
-        public GenericEqualityComparer(Func<T, T, bool> predicate, Func<T, int> gethash)
-        {
-            _predicate = predicate;
-            _gethash = gethash;
-        }
-
-        public bool Equals(T x, T y)
-        {
-            return _predicate(x, y);
-        }
-        public int GetHashCode(T obj)
-        {
-            return _gethash(obj);
+            result = result + obj.Item2 * 1000;
+            return result;
         }
     }
 }
